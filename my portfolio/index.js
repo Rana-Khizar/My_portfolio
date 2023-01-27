@@ -1,6 +1,6 @@
-// ========================================
+
 // Responsive navigation
-// ========================================
+
 const mobile_nav = document.querySelector(".mobile-navbar-btn");
 const nav_header = document.querySelector(".header");
 
@@ -11,9 +11,9 @@ const toggleNavbar = () => {
 
 mobile_nav.addEventListener("click", () => toggleNavbar());
 
-// ========================================
+
 // sticky navigation
-// ========================================
+
 const sectionHero = document.querySelector(".section-hero");
 
 const observer = new IntersectionObserver(
@@ -24,18 +24,18 @@ const observer = new IntersectionObserver(
             document.body.classList.add("sticky") :
             document.body.classList.remove("sticky");
     }, {
-        // viewport
-        root: null,
-        threshold: 0,
-        rootMargin: "-100px",
-    }
+    // viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-100px",
+}
 );
 // when the hero section end part reached then we need to show the sticky navigation
 observer.observe(sectionHero);
 
-// ========================================
+
 //  how to add media queries in JS
-// ========================================
+
 function myFunction(widthSize) {
     if (widthSize.matches) {
         // If media query matches
@@ -74,9 +74,9 @@ myFunction(widthSize);
 // Attach listener function on state changes
 widthSize.addListener(myFunction);
 
-// ========================================
+
 //  scroll to top
-// ========================================
+
 const footerElm = document.querySelector(".section-footer");
 
 const scrollElement = document.createElement("div");
@@ -97,9 +97,9 @@ document.querySelector(".scroll-top").addEventListener("click", scrollTop);
 
 // get the data attributes
 
-// ========================================
+
 //  smooth scrolling
-// ========================================
+
 
 const portfolioSection = document.querySelector(".section-portfolio");
 const contactSection = document.querySelector(".section-contact");
@@ -114,9 +114,9 @@ document.querySelector(".hireme-btn").addEventListener("click", (e) => {
     contactSection.scrollIntoView({ behavior: "smooth" });
 });
 
-// ========================================
+
 // creating a portfolio tabbed component
-// ========================================
+
 
 const port_btn = document.querySelector(".p-btns");
 const p_btn = document.querySelectorAll(".p-btn");
@@ -155,9 +155,9 @@ port_btn.addEventListener("click", (e) => {
     );
 });
 
-// ========================================
+
 //  lazy loading section
-// ========================================
+
 const imgRef = document.querySelector("img[data-src]");
 console.log(imgRef);
 
@@ -175,9 +175,9 @@ const imgObserver = new IntersectionObserver(lazyImg, {
 
 imgObserver.observe(imgRef);
 
-// ========================================
+
 //  animated counter number
-// ========================================
+
 
 const workSection = document.querySelector(".section-work-data");
 
